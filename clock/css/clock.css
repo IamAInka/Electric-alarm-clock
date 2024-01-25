@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../assets/img/kanaDark.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    gap: 3vmin;
+    background-color: #060606;
+    background-image: url('../assets/img/kanaLight.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 4.5vmin solid NavajoWhite;
+    border-radius: 7.5vmin;
+    padding: 18vmin;
+    box-shadow: 0 6vmin 20vmin NavajoWhite;
+    z-index: 1;
+}
+
+.colon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4vmin;
+}
+
+.colon::before,
+.colon::after {
+    content: "";
+    width: 1.5vmin;
+    height: 1.5vmin;
+    border-radius: 50%;
+    background-color: orangered;
+    filter: drop-shadow(0 0 1vmin orangered);
+}
+
+.box .number {
+    display: grid;
+    grid-gap: 0.1vmin;
+    grid-template-areas:
+        ". r1c2 ."
+        "r2c1 . r2c3"
+        ". r3c2 ."
+        "r4c1 . r4c3"
+        ". r5c2 .";
+    grid-template-rows: 2.5vmin 7.5vmin 2.5vmin 7.5vmin 2.5vmin;
+    grid-template-columns: 2.5vmin 7.5vmin 2.5vmin;
+}
+
+.box .number .r1c2 {
+    grid-area: r1c2;
+}
+
+.box .number .r2c1 {
+    grid-area: r2c1;
+}
+
+.box .number .r2c3 {
+    grid-area: r2c3;
+}
+
+.box .number .r3c2 {
+    grid-area: r3c2;
+}
+
+.box .number .r4c1 {
+    grid-area: r4c1;
+}
+
+.box .number .r4c3 {
+    grid-area: r4c3;
+}
+
+.box .number .r5c2 {
+    grid-area: r5c2;
+}
+
+.box .number span {
+    background-color: rgba(30, 30, 34, 0.45);
+    border-radius: 1.5vmin;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.4), 0 0 35px rgba(255, 69, 0, 0.2);
+    text-shadow: 0 0 5px rgba(255, 69, 0, 0.8), 0 0 20px rgba(255, 69, 0, 0.4), 0 0 35px rgba(255, 69, 0, 0.2);
+}
+
+.box .number span.active {
+    background-color: orangered;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 1), 0 0 20px rgba(255, 69, 0, 0.6), 0 0 35px rgba(255, 69, 0, 0.4);
+    text-shadow: 0 0 5px rgba(255, 69, 0, 1), 0 0 20px rgba(255, 69, 0, 0.6), 0 0 35px rgba(255, 69, 0, 0.4);
+}
+
+.extension {
+    position: relative;
+    width: 20vmin;
+    height: 67.8445vmin;
+    background-color: NavajoWhite;
+    border: 4.5vmin solid NavajoWhite;
+    border-radius: 0 7.5vmin 7.5vmin 0;
+    margin-left: -6.9vmin;
+    z-index: -1;
+}
+
+.alarm {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 140vmin;
+    margin-top: 1vmin;
+    font-family: Arial, sans-serif;
+    z-index: 9999;
+}
+
+.alarm label {
+    margin-bottom: 1vmin;
+    text-align: center;
+}
+
+.alarm input[type="number"] {
+    width: 5.2vmin;
+    padding: 3px;
+    margin-bottom: 1vmin;
+    margin-left: 0.9vmin;
+}
+
+.alarm button {
+    margin-bottom: 0.6vmin;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.alarm button:hover {
+    opacity: 1;
+}
+
+.alarm button:active {
+    transform: translateY(1px);
+}
+
+.box .number span {
+    background-color: rgba(30, 30, 34, 0.1);
+    border-radius: 1.5vmin;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#stopBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    min-height: 3.9vmin;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
