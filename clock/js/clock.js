@@ -63,6 +63,20 @@ let isAlarmSet = false;//false时即执行runClock
 let stopButtonPressedTime = 0;
 
 
+
+
+if(alarmMusic.readyState > 0) {
+    // 如果加载成功，可以进行播放等操作
+    console.log("加载成功");
+} else {
+    // 如果加载失败，需要检查路径或者文件是否存在
+    console.error("加载失败");
+}
+
+
+
+
+
 function playAlarm() {
     alarmMusic.play();
     isAlarmSet = true;
@@ -92,12 +106,12 @@ function setAlarm() {
             const timeDifference = currentTime - stopButtonPressedTime;
             if (timeDifference >= 60000) {
                 playAlarm();
-                console.log("0");//  到达设置时间时一分钟内闹钟只播放一次，避免stop后重新播放
+                console.log("le moment est bien choisi");//  到达设置时间时一分钟内闹钟只播放一次，避免stop后重新播放
             } else {
                 console.log("1");
             }
         } else {
-            console.log("-1");
+            console.log("il est encore tôt");
         }
     }
 }
