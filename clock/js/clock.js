@@ -108,10 +108,10 @@ function setAlarm() {
                 playAlarm();
                 console.log("le moment est bien choisi");//  到达设置时间时一分钟内闹钟只播放一次，避免stop后重新播放
             } else {
-                console.log("1");
+                console.log("il est encore tôt");
             }
         } else {
-            console.log("il est encore tôt");
+            console.log("-1");
         }
     }
 }
